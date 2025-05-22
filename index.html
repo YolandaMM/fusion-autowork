@@ -1,9 +1,251 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Autowork | Professional Auto Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* 基础重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #ffffff;
+            color: #1e3c72;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 头部样式 */
+        .header-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .header-img {
+            height: 150px;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        /* 主要内容区域 */
+        main {
+            flex: 1;
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .service-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 12px rgba(30,60,114,0.1);
+            border: 1px solid #e9ecef;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 25px;
+            border: 2px solid #1e3c72;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #2a5298;
+            margin-bottom: 15px;
+            transition: color 0.3s ease;
+        }
+
+        /* 联系信息样式 */
+        .contact-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 10px 0;
+        }
+
+        .contact-icon {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .qrcode {
+            width: 120px;
+            height: auto;
+            margin-top: 15px;
+            border: 2px solid #1e3c72;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        /* 页脚样式 */
+        footer {
+            background: #1e3c72;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            color: white;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .header-img {
+                height: 60px;
+            }
+
+            .service-card {
+                padding: 20px;
+            }
+
+            .service-icon {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-img {
+                height: 50px;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello from Windows!</h1>
+    <header>
+        <div class="header-container">
+            <img src="images/logo.png" alt="Fusion Autowork" class="header-img">
+        </div>
+    </header>
+
+    <main>
+        <div class="service-card">
+            <h2 style="color: #2a5298; border-left: 4px solid #2a5298; padding-left: 15px;">
+                <i class="fas fa-tools"></i> Our Professional Services
+            </h2>
+            
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-comment-dollar service-icon"></i>
+                    <h3>Free Damage Assessment</h3>
+                    <p>Get instant preliminary estimate through our digital platform</p>
+                </div>
+                
+                <div class="service-item">
+                    <i class="fas fa-car-crash service-icon"></i>
+                    <h3>Precision Collision Repair</h3>
+                    <p>Complete collision and frame repair</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-paint-roller service-icon"></i>
+                    <h3>Advanced Paint Solutions</h3>
+                    <p>Professional auto body painting</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-screwdriver-wrench service-icon"></i>
+                    <h3>Comprehensive Mechanical Service</h3>
+                    <p>From routine maintenance to complex diagnostics</p>
+                </div>
+
+                <div class="service-item">
+                    <i class="fas fa-gear service-icon"></i>
+                    <h3>Wheel Alignment</h3>
+                    <p>Professional technicians for perfect alignment</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <h2 style="color: #2a5298; border-left: 4px solid #2a5298; padding-left: 15px;">
+                <i class="fas fa-map-marked-alt"></i> Service Center Location
+            </h2>
+            <div style="position:relative;padding-bottom:56.25%;margin:20px 0">
+                <iframe 
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:8px"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.3144149105947!2d-123.11518468431517!3d49.20971197932378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486753274d7f7a1%3A0x3a4b0b9a9d1b1b1a!2s8770%20Ash%20St%2C%20Vancouver%2C%20BC%20V6P%203M2!5e0!3m2!1sen!2sca!4v1629999999999!5m2!1sen!2sca"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+                <div class="contact-section">
+                    <i class="fas fa-phone contact-icon"></i>
+                    <a href="tel:+16043242310" style="color:white;text-decoration:none;">604-324-2310</a>
+                </div>
+                
+                <div class="contact-section">
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <a href="mailto:service@fusionautowork.com" style="color:white;text-decoration:none;">
+                        service@fusionautowork.com
+                    </a>
+                </div>
+                
+                <div class="contact-section">
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <a href="https://goo.gl/maps/9mZJ7JjJ9JjJ9JjJ9" target="_blank" style="color:white;text-decoration:none;">
+                        8770 Ash Street, Vancouver
+                    </a>
+                </div>
+
+                <div class="contact-section">
+                    <i class="fab fa-weixin contact-icon"></i>
+                    <div>
+                        <p style="margin:0;color:white;">WeChat Service</p>
+                        <img src="images/wechat-qr.png" alt="QR Code" class="qrcode">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certification">
+                <img src="images/icbc-certified.png" alt="ICBC Certified" style="max-width:200px;">
+                <p style="margin-top:10px;color:#4CAF50;">
+                    <i class="fas fa-certificate"></i> ICBC Accredited Repair Center
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
